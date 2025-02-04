@@ -32,7 +32,51 @@ MVPフェーズでは管理者が手動で喫茶店情報を登録し、将来�
 - Google Places APIなどを活用した自動データ取得
 
 ## プロジェクト構成
-K1ssa/ ├── backend/ # Go (Gin) バックエンド │ ├── cmd/ # エントリーポイント │ ├── config/ # 設定ファイル │ ├── controllers/ # APIコントローラー │ ├── middleware/ # ミドルウェア │ ├── models/ # データベースモデル │ ├── routes/ # ルーティング設定 │ ├── services/ # ビジネスロジック │ ├── database/ # DBマイグレーション │ ├── tests/ # テスト │ ├── Dockerfile # Docker設定 │ ├── go.mod # Go modules │ └── main.go # メインエントリーポイント │ ├── frontend/ # React (Next.js) フロントエンド │ ├── public/ # 静的ファイル │ ├── src/ │ │ ├── components/ # UIコンポーネント │ │ ├── pages/ # Next.jsのページ │ │ ├── hooks/ # カスタムフック │ │ ├── styles/ # Tailwind CSS │ │ ├── utils/ # ユーティリティ関数 │ │ ├── types/ # 型定義 │ │ ├── context/ # グローバル状態管理 │ │ └── services/ # API通信ロジック │ ├── next.config.js # Next.js設定 │ ├── package.json # npmパッケージ管理 │ ├── tsconfig.json # TypeScript設定 │ ├── tailwind.config.js # Tailwind設定 │ └── vercel.json # Vercelデプロイ設定 │ ├── docs/ # ドキュメント │ ├── README.md # プロジェクト概要 │ ├── API.md # API仕様 │ ├── ARCHITECTURE.md # アーキテクチャ設計 │ ├── DEPLOYMENT.md # デプロイ手順 │ └── ROADMAP.md # 将来の機能追加計画 │ ├── .gitignore # Git管理対象外ファイル ├── docker-compose.yml # ローカル開発用コンテナ設定 └── README.md # プロジェクトトップの説明
+## プロジェクト構成
+```md
+K1ssa/
+├── backend/                # Go (Gin) バックエンド
+│   ├── cmd/                # エントリーポイント
+│   ├── config/             # 設定ファイル
+│   ├── controllers/        # APIコントローラー
+│   ├── middleware/         # ミドルウェア
+│   ├── models/             # データベースモデル
+│   ├── routes/             # ルーティング設定
+│   ├── services/           # ビジネスロジック
+│   ├── database/           # DBマイグレーション
+│   ├── tests/              # テスト
+│   ├── Dockerfile          # Docker設定
+│   ├── go.mod              # Go modules
+│   └── main.go             # メインエントリーポイント
+│
+├── frontend/               # React (Next.js) フロントエンド
+│   ├── public/             # 静的ファイル
+│   ├── src/
+│   │   ├── components/     # UIコンポーネント
+│   │   ├── pages/          # Next.jsのページ
+│   │   ├── hooks/          # カスタムフック
+│   │   ├── styles/         # Tailwind CSS
+│   │   ├── utils/          # ユーティリティ関数
+│   │   ├── types/          # 型定義
+│   │   ├── context/        # グローバル状態管理
+│   │   └── services/       # API通信ロジック
+│   ├── next.config.js      # Next.js設定
+│   ├── package.json        # npmパッケージ管理
+│   ├── tsconfig.json       # TypeScript設定
+│   ├── tailwind.config.js  # Tailwind設定
+│   └── vercel.json         # Vercelデプロイ設定
+│
+├── docs/                   # ドキュメント
+│   ├── README.md           # プロジェクト概要
+│   ├── API.md              # API仕様
+│   ├── ARCHITECTURE.md     # アーキテクチャ設計
+│   ├── DEPLOYMENT.md       # デプロイ手順
+│   └── ROADMAP.md          # 将来の機能追加計画
+│
+├── .gitignore              # Git管理対象外ファイル
+├── docker-compose.yml      # ローカル開発用コンテナ設定
+└── README.md               # プロジェクトトップの説明
+
 
 
 ## 初期開発の優先事項
@@ -60,11 +104,3 @@ K1ssa/ ├── backend/ # Go (Gin) バックエンド │ ├── cmd/ # エ
 - ダークモード対応
 
 ---
-
-### **次の作業**
-1. `README.md` を更新
-2. **コミット & プッシュ**
-```sh
-git add README.md
-git commit -m "Update README with project details"
-git push origin main
