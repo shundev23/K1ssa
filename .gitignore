@@ -1,0 +1,13 @@
+# Go関連
+bin/
+pkg/
+*.exe
+*.out
+*.test
+vendor/
+
+# Node.js関連
+node_modules/
+.next/
+*.log
+.env
