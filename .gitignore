@@ -5,6 +5,8 @@ pkg/
 *.out
 *.test
 vendor/
+.env
+.vscode/
 
 # Node.js関連
 node_modules/
