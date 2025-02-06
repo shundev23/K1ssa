@@ -6,16 +6,17 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	"github.com/shundev23/K1ssa/backend/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
+
+	"github.com/shundev23/K1ssa/backend/models"
 )
 
 var DB *gorm.DB
 
 func ConnectDatabase() {
 	// .envファイルの読み込み
-	err := godotenv.Load()
+	err := godotenv.Load("../../.env")
 	if err != nil {
 		log.Println("warning: .env file not found")
 	}

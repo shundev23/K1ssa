@@ -6,7 +6,7 @@ import (
 	"github.com/lib/pq"
 )
 
-type CoffeeShop struct {
+type Kissa struct {
 	ID           uint   `gorm:"primaryKey"`
 	Name         string `gorm:"not null"`
 	Address      string `gorm:"not null"`
