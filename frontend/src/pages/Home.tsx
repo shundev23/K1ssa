@@ -1,5 +1,12 @@
+import KissaList from "../components/KissaList";
+
 function Home() {
-    return <h1>Home Page</h1>
+    return (
+    <div>
+        <h1>Home Page</h1>
+        <KissaList />  
+    </div>
+    );
 }
 
 export default Home;
