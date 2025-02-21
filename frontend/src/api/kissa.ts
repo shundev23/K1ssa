@@ -19,3 +19,9 @@ export type Kissa = {
         const response = await apiClient.get<Kissa[]>("/kissa");
         return response.data;
     }
+
+    // 喫茶店詳細を取得
+    export const fetchKissaDetail = async (id: number): Promise<Kissa> => {
+        const response = await apiClient.get<Kissa>(`/kissa/${id}`);
+        return response.data;
+    }

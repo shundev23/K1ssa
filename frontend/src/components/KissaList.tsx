@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import {Kissa, fetchKissaList} from '../api/kissa';
+import { Link } from 'react-router-dom';
 
 const KissaList = () => {
     const [kissas, setKissas] = useState<Kissa[]>([]);
@@ -11,7 +12,7 @@ const KissaList = () => {
             try {
                 const data = await fetchKissaList();
                 setKissas(data);
-            } catch (error) {
+            } catch (err) {
                 setError(new Error("データの取得に失敗しました"));
             } finally {
                 setLoading(false);
@@ -21,12 +22,9 @@ const KissaList = () => {
     }
     , []);
 
-    if (loading) {
-        return <p>Loading...</p>;
-    }
-    if (error) {
-        return <p>{error.message}</p>;
-    }
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>{error.message}</p>;
+    
 
     return (
         <div>
@@ -34,6 +32,9 @@ const KissaList = () => {
             <ul>
                 {kissas.map((kissa) => (
                     <li key={kissa.id}>
+                        <Link to={`/kissa/${kissa.id}`}>
+                        <h3>{kissa.name}</h3>
+                        </Link>
                         <img src={kissa.image_url} alt={kissa.name} />
                         <h3>{kissa.name}</h3>
                         <p>{kissa.address}</p>
