@@ -75,7 +75,7 @@ K1ssa/
 ├── .gitignore              # Git管理対象外ファイル
 ├── docker-compose.yml      # ローカル開発用コンテナ設定
 └── README.md               # プロジェクトトップの説明
-```md
+```
 
 
 ## 初期開発の優先事項
