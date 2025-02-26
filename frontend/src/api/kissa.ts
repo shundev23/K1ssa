@@ -25,3 +25,10 @@ export type Kissa = {
         const response = await apiClient.get<Kissa>(`/kissa/${id}`);
         return response.data;
     }
+
+    // 新しい喫茶店を追加
+    export const createKissa = async (kissa: Omit<Kissa, "id" | "created_at" | "updated_at">
+    ): Promise<Kissa> => {
+        const response = await apiClient.post<Kissa>("/kissa", kissa);
+        return response.data;
+    }
