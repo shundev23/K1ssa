@@ -32,7 +32,6 @@ MVPフェーズでは管理者が手動で喫茶店情報を登録し、将来�
 - Google Places APIなどを活用した自動データ取得
 
 ## プロジェクト構成
-## プロジェクト構成
 ```md
 K1ssa/
 ├── backend/                # Go (Gin) バックエンド
@@ -76,7 +75,7 @@ K1ssa/
 ├── .gitignore              # Git管理対象外ファイル
 ├── docker-compose.yml      # ローカル開発用コンテナ設定
 └── README.md               # プロジェクトトップの説明
-
+```
 
 
 ## 初期開発の優先事項
