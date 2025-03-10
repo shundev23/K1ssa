@@ -1,31 +1,11 @@
-import {useEffect, useState} from 'react';
-import {Kissa, fetchKissaList} from '../api/kissa';
+import { Kissa } from '../api/kissa';
 import { Link } from 'react-router-dom';
 
-const KissaList = () => {
-    const [kissas, setKissas] = useState<Kissa[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [error, setError] = useState<Error | null>(null);
+type Props = {
+    kissas: Kissa[];
+}
 
-    useEffect(() => {
-        const loadKissas = async () => {
-            try {
-                const data = await fetchKissaList();
-                setKissas(data);
-            } catch (err) {
-                setError(new Error("データの取得に失敗しました"));
-            } finally {
-                setLoading(false);
-            }
-        };
-        loadKissas();
-    }
-    , []);
-
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>{error.message}</p>;
-    
-
+const KissaList = ({kissas}: Props) => {
     return (
         <div>
             <h2>喫茶店一覧</h2>

@@ -26,9 +26,11 @@ export type Kissa = {
         return response.data;
     }
 
-    // 新しい喫茶店を追加
-    export const createKissa = async (kissa: Omit<Kissa, "id" | "created_at" | "updated_at">
-    ): Promise<Kissa> => {
-        const response = await apiClient.post<Kissa>("/kissa", kissa);
+    // 送信用のデータ型を定義
+    export type KissaInput = Omit<Kissa, "id" | "created_at" | "updated_at">;
+
+    // 関数の型を変更
+    export const createKissa = async (kissaData: KissaInput): Promise<Kissa> => {
+        const response = await apiClient.post<Kissa>("/kissas", kissaData);
         return response.data;
     }
